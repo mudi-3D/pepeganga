@@ -319,11 +319,12 @@ class MudiExperience {
     };
 
     /** Petición para renderizar los elementos Mudi */
-    mudiRequest(skuNumber) {
+      mudiRequest(skuNumber) {
 
         let container = document.querySelector('.powsa-componentes-0-x-productImagesGallerySwiperContainer');
         if (sku && container) {
-            mudiExperience.experienceOn(skuNumber, container)
+            console.log('Renderizando experiencia')
+            this.experienceOn(skuNumber, container)
         }
         else if (this.valueRequest > 5000) { return }
         else {
