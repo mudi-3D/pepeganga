@@ -322,13 +322,15 @@ let valueRequest = 0
 function mudiRequest() {
     let sku = document.body.querySelector('.pepeganga-pepeganga-theme-15-x-titleChange').getAttribute('skumudi')
     let container = document.querySelector('.pepeganga-pepeganga-theme-15-x-containerSliderT');
-    if (!sku && !container) {
+    if (sku && container) {
+        mudiExperience.experienceOn(sku, container)
+    }
+    else if (valueRequest > 5000) { console.log('pailas perrito'); return }
+    else {
         requestAnimationFrame(mudiRequest);
         valueRequest++;
         console.log(valueRequest)
     }
-    else if (valueRequest > 5000) { console.log('pailas perrito'); return }
-    else { mudiExperience.experienceOn(sku, container) }
 }
 
 mudiRequest();
