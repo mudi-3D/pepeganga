@@ -1,6 +1,3 @@
-"use strict";
-if (window.mudiExperience) return
-
 /** Mudi Experience */
 class MudiExperience {
 
@@ -319,7 +316,7 @@ class MudiExperience {
     };
 
     /** Petición para renderizar los elementos Mudi */
-      mudiRequest(skuNumber) {
+    mudiRequest(skuNumber) {
 
         let container = document.querySelector('.powsa-componentes-0-x-productImagesGallerySwiperContainer');
         if (sku && container) {
