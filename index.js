@@ -330,6 +330,8 @@ function mudiRequest() {
         requestAnimationFrame(mudiRequest);
         valueRequest++;
     }
+
+    console.log('¡probando CDN!')
 }
 
 mudiRequest();
