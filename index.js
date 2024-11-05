@@ -1,3 +1,6 @@
+"use strict";
+if (window.mudiExperience) return
+
 /** Mudi Experience */
 class MudiExperience {
 
@@ -7,6 +10,7 @@ class MudiExperience {
         this.skuNumber = null;
         this.fatherContainer = null;
         this.URLActual = null;
+        this.valueRequest = 0
     };
 
     /** Conect mudiServer  ✔️ */
@@ -31,7 +35,7 @@ class MudiExperience {
                 response = await request.json();
             this.dataServer = response.data[0];
 
-        } catch (error) { console.error(`Mudi Error:\n${error}`) }
+        } catch (error) { console.error(`Mudi Error:\n${error}`) };
 
     };
 
@@ -45,7 +49,7 @@ class MudiExperience {
             link = document.createElement('LINK');
         link.setAttribute('rel', 'stylesheet');
         link.id = "stylesMudiGeneral";
-        link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/pepeganga@latest/index.css`; /* custom this path */
+        link.href = `https://cdn.jsdelivr.net/gh/mudi-3D/pepeganga@latest/index.css`; /* custom this path */
 
         document.head.appendChild(link)
     };
@@ -314,26 +318,21 @@ class MudiExperience {
 
     };
 
+    /** Petición para renderizar los elementos Mudi */
+    mudiRequest(skuNumber) {
+
+        let container = document.querySelector('.powsa-componentes-0-x-productImagesGallerySwiperContainer');
+        if (sku && container) {
+            mudiExperience.experienceOn(skuNumber, container)
+        }
+        else if (this.valueRequest > 5000) { return }
+        else {
+            requestAnimationFrame(this.mudiRequest);
+            this.valueRequest++;
+        }
+    };
+
 };
 
 const mudiExperience = new MudiExperience();
-
-let valueRequest = 0
-function mudiRequest() {
-    let sku = document.body.querySelector('.pepeganga-pepeganga-theme-15-x-titleChange').getAttribute('skumudi')
-    let container = document.querySelector('.powsa-componentes-0-x-productImage .relative');
-    if (sku && container) {
-        mudiExperience.experienceOn(sku, container)
-    }
-    else if (valueRequest > 5000) { return }
-    else {
-        requestAnimationFrame(mudiRequest);
-        valueRequest++;
-    }
-
-    console.log('¡probando CDN!')
-}
-
-mudiRequest();
-
-
+window.mudiExperience = mudiExperience;
