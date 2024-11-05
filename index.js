@@ -321,15 +321,14 @@ const mudiExperience = new MudiExperience();
 let valueRequest = 0
 function mudiRequest() {
     let sku = document.body.querySelector('.pepeganga-pepeganga-theme-15-x-titleChange').getAttribute('skumudi')
-    let container = document.querySelector('.relative');
+    let container = document.querySelector('.powsa-componentes-0-x-productImage .relative');
     if (sku && container) {
         mudiExperience.experienceOn(sku, container)
     }
-    else if (valueRequest > 5000) { console.log('pailas perrito'); return }
+    else if (valueRequest > 5000) { return }
     else {
         requestAnimationFrame(mudiRequest);
         valueRequest++;
-        console.log(valueRequest)
     }
 }
 
