@@ -321,7 +321,7 @@ const mudiExperience = new MudiExperience();
 let valueRequest = 0
 function mudiRequest() {
     let sku = document.body.querySelector('.pepeganga-pepeganga-theme-15-x-titleChange').getAttribute('skumudi')
-    let container = document.querySelector('.pepeganga-pepeganga-theme-15-x-containerSliderT');
+    let container = document.querySelector('.relative');
     if (sku && container) {
         mudiExperience.experienceOn(sku, container)
     }
@@ -334,3 +334,5 @@ function mudiRequest() {
 }
 
 mudiRequest();
+
+
