@@ -319,8 +319,7 @@ class MudiExperience {
     mudiRequest(skuNumber) {
 
         let container = document.querySelector('.powsa-componentes-0-x-productImagesGallerySwiperContainer');
-        if (sku && container) {
-            console.log('Renderizando experiencia')
+        if (container) {
             this.experienceOn(skuNumber, container)
         }
         else if (this.valueRequest > 5000) { return }
