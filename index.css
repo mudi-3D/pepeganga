@@ -8,6 +8,10 @@
     z-index: 10;
 }
 
+.butonMudiVerMas{
+    background-color:#1a4ea2 !important;
+}
+
 .btnsMudiContainer {
     position: absolute;
     width: max-content;
@@ -292,6 +296,13 @@
 
 .tooltipMudi::after{
     display:none
+}
+
+.butonMudiVerMas{
+    top: 5%;
+    left: 1%;
+    bottom: inherit;
+    right:inherit;
 }
 
 
