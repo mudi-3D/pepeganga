@@ -8,10 +8,6 @@
     z-index: 10;
 }
 
-.butonMudiVerMas{
-    background-color:#1a4ea2 !important;
-}
-
 .btnsMudiContainer {
     position: absolute;
     width: max-content;
@@ -299,10 +295,13 @@
 }
 
 .butonMudiVerMas{
-    top: 5%;
-    left: 1%;
-    bottom: inherit !important;
+    bottom: 17%;
     right:inherit !important;
+    border-radius:5px
+}
+
+.butonMudiVerMas:hover{
+    background-color:#1a4ea2
 }
 
 
