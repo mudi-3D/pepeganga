@@ -2,6 +2,14 @@
     left: 103px;
 }
 
+.butonMudiVerMas{
+    border-radius:5px
+}
+
+.butonMudiVerMas:hover{
+    background-color:#1a4ea2
+}
+
 .deployMundi {
     position: absolute;
     width: 36%;
@@ -298,10 +306,6 @@
     bottom: 17% !important;
     right:inherit !important;
     border-radius:5px
-}
-
-.butonMudiVerMas:hover{
-    background-color:#1a4ea2
 }
 
 
