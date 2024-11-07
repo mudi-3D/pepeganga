@@ -301,8 +301,8 @@
 .butonMudiVerMas{
     top: 5%;
     left: 1%;
-    bottom: inherit;
-    right:inherit;
+    bottom: inherit !important;
+    right:inherit !important;
 }
 
 
