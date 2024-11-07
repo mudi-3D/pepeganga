@@ -295,7 +295,7 @@
 }
 
 .butonMudiVerMas{
-    bottom: 17%;
+    bottom: 17% !important;
     right:inherit !important;
     border-radius:5px
 }
