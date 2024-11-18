@@ -312,6 +312,8 @@ class MudiExperience {
         this.createStyles();
         /** Create Buttons */
         this.createBtns();
+        /** Create eventView*/
+        this.sendEventViewer()
 
     };
 
